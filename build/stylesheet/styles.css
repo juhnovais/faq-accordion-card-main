@@ -1,0 +1,165 @@
+body {
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  max-height: 100%;
+  font-size: 12px;
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  color: hsl(238, 29%, 16%);
+}
+body main {
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+  align-content: center;
+  margin: auto 26px;
+  width: 100%;
+  max-width: 310px;
+}
+@media only screen and (min-width: 960px) {
+  body main {
+    flex-flow: row;
+    max-width: 790px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 20px 50px hsl(237, 12%, 33%);
+    align-items: center;
+    height: 400px;
+    gap: 40px;
+    padding-right: 36px;
+  }
+}
+body main .mainImg {
+  margin-bottom: -145px;
+  margin-left: auto;
+  height: 260px;
+  width: 260px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: auto;
+  z-index: 100;
+}
+body main .mainImg .imgDesk {
+  display: none;
+}
+body main .mainImg .bg-pattern-mobile {
+  width: 260px;
+  margin-top: -90px;
+}
+@media only screen and (min-width: 960px) {
+  body main .mainImg {
+    overflow: hidden;
+  }
+  body main .mainImg .imgMob {
+    display: none;
+  }
+  body main .mainImg .imgDesk {
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  body main .mainImg .bg-pattern-desktop {
+    position: relative;
+    z-index: 1;
+    height: 600px;
+    margin-left: -240px;
+    margin-top: -165px;
+  }
+  body main .mainImg .woman-online-desktop {
+    margin-top: -60px;
+    width: 429px;
+    margin-left: -56px;
+    z-index: 100;
+  }
+  body main .mainImg .box-desktop {
+    height: auto;
+    margin-left: -80px;
+    position: absolute;
+    margin-bottom: -62px;
+    z-index: 200;
+  }
+}
+@media only screen and (min-width: 960px) {
+  body main .mainImg {
+    width: 50%;
+    height: 100%;
+    max-height: 400px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+  }
+}
+body main .contentWrap {
+  background-color: #fff;
+  text-align: center;
+  padding-top: 110px;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-bottom: 36px;
+  border-radius: 20px;
+  box-shadow: 0px 20px 50px hsl(237, 12%, 33%);
+}
+@media only screen and (min-width: 960px) {
+  body main .contentWrap {
+    box-shadow: none;
+    padding: 0;
+    text-align: left;
+  }
+}
+body main .contentWrap h1 {
+  font-weight: 700;
+}
+body main .contentWrap section {
+  text-align: left;
+  padding: 10px 0px;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+body main .contentWrap section .answer {
+  color: hsl(240, 6%, 50%);
+  display: none;
+  transition: display 0.5s ease-in-out;
+}
+body main .contentWrap section .questionWrap {
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  grid-template-rows: auto;
+  align-items: center;
+  /* Show the answer when the radio input is checked */
+}
+body main .contentWrap section .questionWrap .question {
+  color: hsl(237, 12%, 33%);
+}
+body main .contentWrap section .questionWrap .icon {
+  grid-row: 1;
+  grid-column: 2;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out;
+}
+body main .contentWrap section .questionWrap input {
+  opacity: 0;
+  cursor: pointer;
+  grid-row: 1;
+  grid-column: 2;
+}
+body main .contentWrap section .questionWrap input[type=radio]:checked ~ .question {
+  font-weight: bold;
+}
+body main .contentWrap section .questionWrap input[type=radio]:checked ~ .answer {
+  display: block;
+}
+body main .contentWrap section .questionWrap input[type=radio]:checked ~ .icon {
+  transform: rotate(180deg);
+}
+@media only screen and (min-width: 960px) {
+  body main .contentWrap {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
